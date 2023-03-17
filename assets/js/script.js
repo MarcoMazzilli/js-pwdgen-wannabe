@@ -12,17 +12,31 @@ Per creare la "password personalizzata" e mostrarla all'utente utilizzerò una v
 
 const name = prompt('Inserisci qui il tuo nome');
 
-const surname = prompt('Ci servirebbe anche il cognome :)');
+const surname = prompt('Ci servirebbe anche il cognome,:)' );
 
 const favouriteColor = prompt('Qual\'è il tuo colore preferito?');
 
-const age = prompt('Quanti anni hai?');
+const age = parseInt(prompt('Quanti anni hai?')) ;
 
-console.log('Nome -->',name,'Cognome -->', surname,'Colore Preferito -->', favouriteColor, 'Età -->', age );
+const currentDate = 2023;
 
-let generatedPassword = name + surname + favouriteColor + age; 
+const dateOfBirth = currentDate - age;
+console.log(dateOfBirth);
 
-console.log(generatedPassword)
+// dichiarazioni variabili
 
-document.getElementById('nameOutput').innerHTML = name
-document.getElementById('outputPassword').innerHTML = generatedPassword
+let generatedPassword = name + surname + favouriteColor + dateOfBirth; 
+
+console.log(generatedPassword);
+
+document.getElementById('nameOutput').innerHTML = name;
+document.getElementById('nameOutput_spiegazione').innerHTML = name;
+document.getElementById('outputPassword').innerHTML = generatedPassword;
+
+let spiegazione = `
+Conosendo il tuo nome: "${name}",cognome: "${surname}", la tua età: "${age}" e il tuo colore preferito (il "${favouriteColor}")
+possiamo creare la combo perfetta per una password infallibile! <br>
+A cosa ci serviva la tua età? <br>
+Per calcolare la tua data di nascita, nonchè le ultime quattro cifre della tua password.
+`;
+document.getElementById('spiegazioneOutput').innerHTML = spiegazione ;
