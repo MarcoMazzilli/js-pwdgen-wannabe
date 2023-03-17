@@ -16,21 +16,25 @@
 
       <div class="col-auto">
         <div class="card my-3">
-          <h1 class="p-4">Insicurissimo Password Generator</h1>
+          <h1 class="p-4"><i class="fa-solid fa-fingerprint"></i> Insicurissimo Password Generator</h1>
         </div>
       </div>
       <div class="col-12 mb-3">
         <div class="card">
-          <h2>Come funziona?</h2>
-          <p>Ciao <span id="name">???</span> inserisci i dati richiesti, noi genereremo per te la <span class="text-danger text-uppercase text-decoration-underline">password pi&ugrave; sicura</span> del mondo!</p>
+          <h2><i class="fa-solid fa-user"></i> Come funziona?</h2>
+          <p>Ciao <span id="nameOutput" class="fw-bolder fs-4 text-capitalize"></span> inserisci i dati richiesti, noi genereremo per te la <span class="text-danger text-uppercase text-decoration-underline fw-semibold">password pi&ugrave; sicura</span> del mondo!</p>
           <p>Per utilizzarla ti baster&agrave; copiarla ad incollarla ovunque ti serva. <br> Buon divertimento!</p>
           <p></p>
         </div>
       </div>
-      <div class="col-7 mb-3">  
-        <div class="card">
-          <h3>Password generata :</h3>
-          <span id="outputPassword">???</span>
+      <div class="col-auto mb-3">  
+        <div class="card px-2">
+          <h4><i class="fa-solid fa-lock"></i> Password generata</h4>
+          <i class="fa-solid fa-angles-down"></i>
+          <div class="p-2 m-3 d-flex align-items-center justify-content-center border border-primary rounded-3 ">
+            <button type="button" class="btn btn-light me-3"><i class="fa-solid fa-copy text-primary"></i></button>
+            <span id="outputPassword" class="fs-2 text-capitalize">???</span>
+          </div>
 
 
 
